@@ -1,0 +1,4 @@
+Mipa\ImageBundle\Entity\Images:
+  image:
+    mapping: image
+    filename_property: name
