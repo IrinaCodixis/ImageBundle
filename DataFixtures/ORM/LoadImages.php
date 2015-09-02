@@ -10,7 +10,7 @@ class LoadImages extends AbstractFixture implements OrderedFixtureInterface
 {
   public function load(ObjectManager $em)
   {
-    $image1->new Images();
+    $image1 = new Images();
 	$image1->setTitle('Red flower');
     $image1->setName('tulip');
     $image1->setImage('img');
