@@ -6,7 +6,7 @@ use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\DataFixtures\OrderedFixtureInterface;
 use Mipa\ImageBundle\Entity\Images;
  
-class LoadJobData extends AbstractFixture implements OrderedFixtureInterface
+class LoadImages extends AbstractFixture implements OrderedFixtureInterface
 {
   public function load(ObjectManager $em)
   {
