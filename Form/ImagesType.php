@@ -15,11 +15,12 @@ class ImagesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder->add('title');
+		$builder->add('name');
         $builder->add('image', 'vich_file', array(
 			'required'      => false,
 			'allow_delete'  => true, // not mandatory, default is true
 			'download_link' => true) // not mandatory, default is true
-        $builder->add('name');
+        
     }
     
     /**
