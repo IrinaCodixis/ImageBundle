@@ -3,7 +3,7 @@ Mipa\ImageBundle\Entity\Image:
   table: image
   id:
     id:
-      type:integer
+      type: integer
       generator: { strategy: AUTO }
   fields:
     title:
