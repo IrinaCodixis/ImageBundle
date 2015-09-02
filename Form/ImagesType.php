@@ -16,10 +16,7 @@ class ImagesType extends AbstractType
     {
         $builder->add('title');
 		$builder->add('name');
-        $builder->add('image', 'vich_file', array(
-			'required'      => false,
-			'allow_delete'  => true, 
-			'download_link' => true)); 
+        $builder->add('image'); 
         
     }
     
