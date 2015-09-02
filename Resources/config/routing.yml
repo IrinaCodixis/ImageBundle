@@ -1,6 +1,6 @@
 mipa_image_mipa_img:
     resource: "@MipaImageBundle/Resources/config/routing/images.yml"
-    prefix:   /mipa_img
+    prefix:   /images
 
 mipa_image_homepage:
     path:     /hello/{name}
