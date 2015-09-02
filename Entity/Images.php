@@ -10,6 +10,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
  * Images
+ * @Vich\Uploadable 
+ * @ORM\HasLifecycleCallbacks
  */
 class Images
 {
