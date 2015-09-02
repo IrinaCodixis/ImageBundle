@@ -1,0 +1,30 @@
+mipa_img:
+    path:     /
+    defaults: { _controller: "MipaImageBundle:Images:index" }
+
+mipa_img_show:
+    path:     /{id}/show
+    defaults: { _controller: "MipaImageBundle:Images:show" }
+
+mipa_img_new:
+    path:     /new
+    defaults: { _controller: "MipaImageBundle:Images:new" }
+
+mipa_img_create:
+    path:     /create
+    defaults: { _controller: "MipaImageBundle:Images:create" }
+    methods:  POST
+
+mipa_img_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "MipaImageBundle:Images:edit" }
+
+mipa_img_update:
+    path:     /{id}/update
+    defaults: { _controller: "MipaImageBundle:Images:update" }
+    methods:  [POST, PUT]
+
+mipa_img_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "MipaImageBundle:Images:delete" }
+    methods:  [POST, DELETE]

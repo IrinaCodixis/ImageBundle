@@ -1,3 +1,7 @@
+mipa_image_mipa_img:
+    resource: "@MipaImageBundle/Resources/config/routing/images.yml"
+    prefix:   /mipa_img
+
 mipa_image_homepage:
     path:     /hello/{name}
     defaults: { _controller: MipaImageBundle:Default:index }
