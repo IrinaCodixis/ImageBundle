@@ -15,4 +15,7 @@ Mipa\ImageBundle\Entity\Images:
         image:
             type: string
             length: 255
+        name:
+            type: string
+            length: 255
     lifecycleCallbacks: {  }
