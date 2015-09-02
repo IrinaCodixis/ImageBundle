@@ -1,0 +1,18 @@
+Mipa\ImageBundle\Entity\Images:
+    type: entity
+    table: null
+    repositoryClass: Mipa\ImageBundle\Entity\ImagesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        title:
+            type: string
+            length: 255
+        image:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }
