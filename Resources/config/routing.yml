@@ -1,0 +1,3 @@
+mipa_image_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MipaImageBundle:Default:index }
