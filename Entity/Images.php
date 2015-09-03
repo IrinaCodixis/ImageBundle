@@ -136,4 +136,28 @@ class Images
 	{
 		return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
 	}
+
+    /**
+     * @ORM\PrePersist
+     */
+    public function preUpload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostPersist
+     */
+    public function upload()
+    {
+        // Add your code here
+    }
+
+    /**
+     * @ORM\PostRemove
+     */
+    public function removeUpload()
+    {
+        // Add your code here
+    }
 }

@@ -4,8 +4,14 @@ namespace Mipa\ImageBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\Validator\Constraints as Assert;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 /**
  * Images
+ * @Vich\Uploadable 
+ * @ORM\HasLifecycleCallbacks
  */
 class Images
 {
@@ -23,6 +29,8 @@ class Images
      * @var string
      */
     private $image;
+	
+	public $file;
 
 
     /**
@@ -80,4 +88,52 @@ class Images
     {
         return $this->image;
     }
+    /**
+     * @var string
+     */
+    private $name;
+
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     * @return Images
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string 
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+	protected function getUploadDir()
+	{
+		return 'uploads/pics';
+	}
+	 
+	protected function getUploadRootDir()
+	{
+		return __DIR__.'/../../../../web/'.$this->getUploadDir();
+	}
+	 
+	public function getWebPath()
+	{
+		return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+	}
+	 
+	public function getAbsolutePath()
+	{
+		return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+	}
 }
