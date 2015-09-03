@@ -172,8 +172,6 @@ class ImagesController extends Controller
         $editForm->handleRequest($request);
 
         if ($editForm->isValid()) {
-			$entity->preUpload();
-			$em->persist($entity);
             $em->flush();
 
             return $this->redirect($this->generateUrl('mipa_img_preview', array('id' => $id)));
