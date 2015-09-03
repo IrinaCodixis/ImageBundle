@@ -29,6 +29,8 @@ class Images
      * @var string
      */
     private $image;
+	
+	public $file;
 
 
     /**
@@ -114,4 +116,24 @@ class Images
     {
         return $this->name;
     }
+
+	protected function getUploadDir()
+	{
+		return 'uploads/pics';
+	}
+	 
+	protected function getUploadRootDir()
+	{
+		return __DIR__.'/../../../../web/'.$this->getUploadDir();
+	}
+	 
+	public function getWebPath()
+	{
+		return null === $this->image ? null : $this->getUploadDir().'/'.$this->image;
+	}
+	 
+	public function getAbsolutePath()
+	{
+		return null === $this->image ? null : $this->getUploadRootDir().'/'.$this->image;
+	}
 }
