@@ -228,7 +228,7 @@ class ImagesController extends Controller
 	{
 	  $em = $this->getDoctrine()->getManager();
 	 
-	  $entity = $em->getRepository('EnsJobeetBundle:Job')->find($id);
+	  $entity = $em->getRepository('MipaImageBundle:Images')->find($id);
 	 
 	  if (!$entity) {
 		throw $this->createNotFoundException('Unable to find entity.');
