@@ -1,14 +1,15 @@
 {% extends '::base.html.twig' %}
 
+{% form_theme form _self %}
 {% block body -%}
     <h1>Images creation</h1>
 
      <form action="{{ path('mipa_img_create') }}" method="post" {{ form_enctype(form) }}>
-    <table id="job_form">
+    <table id="img_form">
       <tfoot>
         <tr>
           <td colspan="2">
-            <input type="submit" value="Preview your job" />
+            <input type="submit" value="Create" />
           </td>
         </tr>
       </tfoot>
