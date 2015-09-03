@@ -18,7 +18,7 @@
             <tr>
                 <td><a href="{{ path('mipa_img_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.title }}</td>
-                <td><img src="/uploads/pics/{{ entity.image }}" height="150" width="150"></td>
+                <td><img src="/uploads/pics/{{ entity.image }}" height="150" width="150" | imagine_filter('my_thumb')></td>
                 <td>{{ entity.name }}</td>
                 <td>
                 <ul>
