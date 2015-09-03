@@ -46,7 +46,7 @@ class ImagesController extends Controller
             $em->persist($entity);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('mipa_img_show', array('id' => $entity->getId())));
+            return $this->redirect($this->generateUrl('mipa_img_preview', array('id' => $entity->getId())));
         }
 
         return $this->render('MipaImageBundle:Images:new.html.twig', array(
@@ -81,7 +81,7 @@ class ImagesController extends Controller
     public function newAction()
     {
         $entity = new Images();
-        $form   = $this->createCreateForm($entity);
+        $form   = $this->createForm(new ImagesType(), $entity);
 
         return $this->render('MipaImageBundle:Images:new.html.twig', array(
             'entity' => $entity,
@@ -174,7 +174,7 @@ class ImagesController extends Controller
         if ($editForm->isValid()) {
             $em->flush();
 
-            return $this->redirect($this->generateUrl('mipa_img_edit', array('id' => $id)));
+            return $this->redirect($this->generateUrl('mipa_img_preview', array('id' => $id)));
         }
 
         return $this->render('MipaImageBundle:Images:edit.html.twig', array(
@@ -223,4 +223,22 @@ class ImagesController extends Controller
             ->getForm()
         ;
     }
+	
+	public function previewAction($id)
+	{
+	  $em = $this->getDoctrine()->getManager();
+	 
+	  $entity = $em->getRepository('EnsJobeetBundle:Job')->find($id);
+	 
+	  if (!$entity) {
+		throw $this->createNotFoundException('Unable to find entity.');
+	  }
+	 
+		 $deleteForm = $this->createDeleteForm($entity->getId());
+ 
+	  return $this->render('MipaImageBundle:Images:show.html.twig', array(
+		'entity'      => $entity,
+		'delete_form' => $deleteForm->createView(),
+	  ));
+	}
 }

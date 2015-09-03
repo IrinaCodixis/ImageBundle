@@ -28,3 +28,12 @@ mipa_img_delete:
     path:     /{id}/delete
     defaults: { _controller: "MipaImageBundle:Images:delete" }
     methods:  [POST, DELETE]
+
+mipa_img_preview:
+    path:     /{id}/preview
+    defaults: { _controller: "MipaImageBundle:Images:preview" }
+
+mipa_img_preview:
+    path:     /{id}/publish
+    defaults: { _controller: "MipaImageBundle:Images:publish" }
+    requirements: { _method: post }
