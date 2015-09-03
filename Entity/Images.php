@@ -142,7 +142,10 @@ class Images
      */
     public function preUpload()
     {
-        // Add your code here
+         if (null !== $this->file) {
+		// do whatever you want to generate a unique name
+		$this->image = uniqid().'.'.$this->file->guessExtension();
+  }
     }
 
     /**
@@ -150,7 +153,16 @@ class Images
      */
     public function upload()
     {
-        // Add your code here
+       if (null === $this->file) {
+		return;
+	  }
+	 
+	  // if there is an error when moving the file, an exception will
+	  // be automatically thrown by move(). This will properly prevent
+	  // the entity from being persisted to the database on error
+	  $this->file->move($this->getUploadRootDir(), $this->image);
+	 
+	  unset($this->file);
     }
 
     /**
@@ -158,6 +170,8 @@ class Images
      */
     public function removeUpload()
     {
-        // Add your code here
+        if ($file = $this->getAbsolutePath()) {
+			unlink($file);
+	    }
     }
 }
