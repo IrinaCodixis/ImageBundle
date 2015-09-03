@@ -3,44 +3,7 @@
 {% block body -%}
     <h1>Images edit</h1>
 
-    <form action="{{ path('mipa_img_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
-    <table id="img_form">
-      <tfoot>
-        <tr>
-          <td colspan="2">
-            <input type="submit" value="Preview" />
-          </td>
-        </tr>
-      </tfoot>
-      <tbody>
-        <tr>
-          <th>{{ form_label(edit_form.title) }}</th>
-          <td>
-            {{ form_errors(edit_form.title) }}
-            {{ form_widget(edit_form.title) }}
-          </td>
-        </tr>
-        <tr>
-          <th>{{ form_label(edit_form.name) }}</th>
-          <td>
-            {{ form_errors(edit_form.name) }}
-            {{ form_widget(edit_form.name) }}
-          </td>
-        </tr>
-       
-        <tr>
-          <th>{{ form_label(edit_form.file) }}</th>
-          <td>
-            {{ form_errors(edit_form.file) }}
-            {{ form_widget(edit_form.file) }}
-          </td>
-        </tr>
-        
-        </tbody>
-    </table>
- 
-    {{ form_rest(edit_form) }}
-  </form>
+    {{ form(edit_form) }}
 
         <ul class="record_actions">
     <li>
