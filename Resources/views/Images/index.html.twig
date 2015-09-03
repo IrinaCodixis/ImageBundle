@@ -15,10 +15,10 @@
         </thead>
         <tbody>
         {% for entity in entities %}
-            <tr>
+            <tr>entity.image
                 <td><a href="{{ path('mipa_img_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.title }}</td>
-                <td><img src="{{ '/uploads/pics/{{ entity.image }}' | imagine_filter('my_thumb') }}"/></td>
+                <td><img src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
                 <td>{{ entity.name }}</td>
                 <td>
                 <ul>
