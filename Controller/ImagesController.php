@@ -36,10 +36,11 @@ class ImagesController extends Controller
     public function createAction(Request $request)
     {
         $entity = new Images();
-        $form = $this->createCreateForm($entity);
-        $form->handleRequest($request);
-
-        if ($form->isValid()) {
+        $request = $this->getRequest();
+		$form    = $this->createForm(new ImageType(), $entity);
+		$form->bindRequest($request);
+        
+		if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
 						
             $em->persist($entity);
