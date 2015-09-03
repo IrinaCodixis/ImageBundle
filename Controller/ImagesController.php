@@ -37,7 +37,7 @@ class ImagesController extends Controller
     {
         $entity = new Images();
         $request = $this->getRequest();
-		$form    = $this->createForm(new ImageType(), $entity);
+		$form    = $this->createForm(new ImagesType(), $entity);
 		$form->bindRequest($request);
         
 		if ($form->isValid()) {

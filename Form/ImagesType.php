@@ -16,7 +16,7 @@ class ImagesType extends AbstractType
     {
         $builder->add('title');
 		$builder->add('name');
-        $builder->add('file', 'image', array('label' => 'Pictures', 'required' => false));); 
+        $builder->add('file', 'file', array('label' => 'Pictures', 'required' => false));
         
     }
     
