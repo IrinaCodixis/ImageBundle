@@ -38,7 +38,7 @@ class ImagesController extends Controller
         $entity = new Images();
         $request = $this->getRequest();
 		$form    = $this->createForm(new ImagesType(), $entity);
-		$form->bindRequest($request);
+		$form->bind($request);
         
 		if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
