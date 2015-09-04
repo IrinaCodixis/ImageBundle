@@ -30,7 +30,8 @@ class ImageAdmin extends Admin
     {
         $datagridMapper
             ->add('title')
-			->add('name');
+			->add('name')
+			->end();
     }
  
     protected function configureListFields(ListMapper $listMapper)
