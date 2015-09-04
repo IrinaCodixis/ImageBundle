@@ -9,3 +9,5 @@ services:
         tags:
             - { name: sonata.admin, manager_type: orm, group: image, label: Images }
         arguments: [null, Mipa\ImageBundle\Entity\Images, MipaImageBundle:ImageAdmin]
+        calls:
+            - [ setTranslationDomain, [Mipa\ImageBundle]]
