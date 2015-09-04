@@ -40,8 +40,7 @@ class ImageAdmin extends Admin
         $listMapper
             ->addIdentifier('name')
             ->add('title')
-			->add('file', 'file', array('label' => 'Pictures', 'required' => false))
-            ->add('_action', 'actions', array(
+			->add('_action', 'actions', array(
                 'actions' => array(
                     'view' => array(),
                     'edit' => array(),
@@ -56,7 +55,7 @@ class ImageAdmin extends Admin
         $showMapper
             ->add('title')
 			->add('name')
-			->add('file', 'file', array('label' => 'Pictures', 'required' => false))
+			->addadd('webPath', 'string', array('template' => 'MipaImageBundle:ImageAdmin:list_image.html.twig'))
         ;
     }
 	
