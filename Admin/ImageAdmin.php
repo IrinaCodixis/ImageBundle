@@ -30,8 +30,7 @@ class ImageAdmin extends Admin
     {
         $datagridMapper
             ->add('title')
-			->add('name')
-        ;
+			->add('name');
     }
  
     protected function configureListFields(ListMapper $listMapper)
@@ -54,7 +53,7 @@ class ImageAdmin extends Admin
         $showMapper
             ->add('title')
 			->add('name')
-			->addadd('webPath', 'string', array('template' => 'MipaImageBundle:ImageAdmin:list_image.html.twig'))
+			->add('webPath', 'string', array('template' => 'MipaImageBundle:ImageAdmin:list_image.html.twig'))
         ;
     }
 	
