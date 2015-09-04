@@ -242,20 +242,5 @@ class ImagesController extends Controller
 	  ));
 	}
 	
-	public function listAction(Request $request)
-	{
-		$em    = $this->get('doctrine.orm.entity_manager');
-		$dql   = "SELECT a FROM MipaImageBundle:Article a";
-		$query = $em->createQuery($dql);
-
-		$paginator  = $this->get('knp_paginator');
-		$pagination = $paginator->paginate(
-			$query,
-			$request->query->getInt('page', 1)/*page number*/,
-			10/*limit per page*/
-		);
-
-		// parameters to template
-		return $this->render('MipaImageBundle:Default:index.html.twig', array('pagination' => $pagination));
-	}
+	
 }

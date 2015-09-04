@@ -4,23 +4,19 @@
 {% block content %}
     <h1>Images list</h1>
 
-	<div class="count">
-    {{ pagination.getTotalItemCount }}
-	</div>
-	
     <table class="records_list">
         <thead>
             <tr>
-                <th>{{ knp_pagination_sortable(pagination, 'id', 'a.id') }}</th>
-				<th{% if pagination.isSorted('a.title') %} class="sorted"{% endif %}>{{ knp_pagination_sortable(pagination, 'title', 'a.title') }}</th>
-                <th>{{ knp_pagination_sortable(pagination, 'image', 'a.image') }}</th>
-                <th>{{ knp_pagination_sortable(pagination, 'name', 'a.name') }}</th>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Image</th>
+                <th>Name</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for article in pagination %}
-            <tr{% if loop.index is odd %}class="color"{% endif %}>
+        {% for entity in entities %}
+            <tr>
                 <td><a href="{{ path('mipa_img_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.title }}</td>
                 <td><img src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
@@ -40,9 +36,6 @@
         </tbody>
     </table>
 
-	<div class="navigation">
-    {{ knp_pagination_render(pagination) }}
-	</div>
         <ul>
         <li>
             <a href="{{ path('mipa_img_new') }}">
