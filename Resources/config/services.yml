@@ -1,4 +1,11 @@
-services:
+#services:
 #    mipa_image.example:
 #        class: Mipa\ImageBundle\Example
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+services:
+    mipa_image.admin.image:
+        class: Mipa\ImageBundle\Admin\ImageAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: image, label: Images }
+        arguments: [null, Mipa\ImageBundle\Entity\Images, MipaImageBundle:ImageAdmin]
