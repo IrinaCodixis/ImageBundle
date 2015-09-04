@@ -1,7 +1,7 @@
-{% extends '::base.html.twig' %}
+{% extends 'TestEventBundle::layout.html.twig' %}
 
-{% form_theme form _self %}
-{% block body -%}
+
+{% block content %}
     <h1>Images creation</h1>
 
      <form action="{{ path('mipa_img_create') }}" method="post" {{ form_enctype(form) }}>
