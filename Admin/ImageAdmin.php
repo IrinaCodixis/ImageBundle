@@ -31,7 +31,6 @@ class ImageAdmin extends Admin
         $datagridMapper
             ->add('title')
 			->add('name')
-			->add('file', 'file', array('label' => 'Pictures', 'required' => false))
         ;
     }
  
