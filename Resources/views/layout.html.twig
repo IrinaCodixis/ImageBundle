@@ -6,16 +6,17 @@
         Images
       {% endblock %}
     </title>
-    {% block stylesheets %}
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">
+    
+	{% block stylesheets %}
+	  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/bootstrap.min.css') }}" type="text/css" media="all" />
+	  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/thumbnail-gallery.css') }}" type="text/css" media="all" />
+	{% endblock %}
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	{% block javascripts %}
+		<script src="bootstrap.min.js"></script>
+		<script src="jquery.js"></script>
+	{% endblock %}
 
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    {% endblock %}
    </head>
   <body>
     <div class="content">
