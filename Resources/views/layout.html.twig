@@ -7,15 +7,16 @@
       {% endblock %}
     </title>
     
-	{% block stylesheets %}
-	  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/bootstrap.min.css') }}" type="text/css" media="all" />
-	  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/thumbnail-gallery.css') }}" type="text/css" media="all" />
-	{% endblock %}
+{% block stylesheets %}
+  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/bootstrap.min.css') }}" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/thumbnail-gallery.css') }}" type="text/css" media="all" />
+  <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/bootstrap.css') }}" type="text/css" media="all" />
+{% endblock %}
 
-	{% block javascripts %}
-		<script src="bootstrap.min.js"></script>
-		<script src="jquery.js"></script>
-	{% endblock %}
+{% block javascripts %}
+	<script src="bootstrap.min.js"></script>
+	<script src="jquery.js"></script>
+{% endblock %}
 
    </head>
   <body>
