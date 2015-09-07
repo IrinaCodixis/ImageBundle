@@ -11,11 +11,7 @@ use Mipa\ImageBundle\Entity\Images;
  
 class ImageAdmin extends Admin
 {
-	 // setup the defaut sort column and order
-    protected $datagridValues = array(
-        '_sort_order' => 'name',
-        
-    );
+	
  
     protected function configureFormFields(FormMapper $formMapper)
     {

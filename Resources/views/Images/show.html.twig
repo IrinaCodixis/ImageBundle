@@ -15,7 +15,7 @@
             </tr>
             <tr>
                 <th>Image</th>
-                <td>{{ entity.image }}</td>
+                <td><img class="img-responsive" src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
             </tr>
             <tr>
                 <th>Name</th>
