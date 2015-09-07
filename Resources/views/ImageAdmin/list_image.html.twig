@@ -1,10 +1,4 @@
-{% extends '::base.html.twig' %}
-
-{% block body -%}
-<table>
 <tr>
     <th>Images</th>
     <td><img src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
 </tr>
-</table>
-{% endblock %}
