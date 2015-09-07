@@ -1,8 +1,9 @@
 {% extends 'MipaImageBundle::layout.html.twig' %}
 
 {% block content %}
-{% for entity in entities %}
+
 <table>
+{% for entity in entities %}
 <tr>
     <th>Images</th>
     <td><img src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
