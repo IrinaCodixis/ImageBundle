@@ -10,6 +10,6 @@ login:
     pattern:   /admin/login
     defaults:  { _controller: MipaImageBundle:Default:login }
 login_check:
-    pattern:   /admin//login_check
+    pattern:   /admin/login_check
 logout:
-    pattern:   /admin//logout
+    pattern:   /admin/logout
