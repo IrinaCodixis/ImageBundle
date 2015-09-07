@@ -1,7 +1,7 @@
 {% extends 'MipaImageBundle::layout.html.twig' %}
 
 {% block content %}
-    <h1>Images list</h1>
+    <h1 class="page-header">Images list</h1>
 
     <table class="records_list">
         <thead>
@@ -18,7 +18,7 @@
             <tr>
                 <td><a href="{{ path('mipa_img_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
                 <td>{{ entity.title }}</td>
-                <td><img src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
+                <td class="thumbnail"><img class="img-responsive" src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
                 <td>{{ entity.name }}</td>
                 <td>
                 <ul>
