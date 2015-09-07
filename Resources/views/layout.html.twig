@@ -13,11 +13,7 @@
   <link rel="stylesheet" href="{{ asset('bundles/mipaimage/css/bootstrap.css') }}" type="text/css" media="all" />
 {% endblock %}
 
-{% block javascripts %}
-	<script type="text/javascript" src="{{ asset('bundles/mipaimage/js/bootstrap.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/mipaimage/js/jquery.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('bundles/mipaimage/js/bootstrap.js') }}"></script>
-{% endblock %}
+
 
    </head>
   <body>
@@ -25,5 +21,10 @@
             {% block content %}
             {% endblock %}
     </div>
+	{% block javascripts %}
+	<script type="text/javascript" src="{{ asset('bundles/mipaimage/js/bootstrap.min.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/mipaimage/js/jquery.js') }}"></script>
+	<script type="text/javascript" src="{{ asset('bundles/mipaimage/js/bootstrap.js') }}"></script>
+{% endblock %}
   </body>
 </html>
