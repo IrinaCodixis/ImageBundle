@@ -3,11 +3,11 @@
 {% block content %}
 
 <table>
-{% for entity in entities %}
+
 <tr>
     <th>Images</th>
-    <td><img src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
+    <td><img src="{{ asset(object.webPath) }}"/></td>
 </tr>
 </table>
-{% endfor %}
+
 {% endblock %}
