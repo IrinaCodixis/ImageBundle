@@ -10,7 +10,7 @@
 			</div>
 			{% for entity in entities %}
 			<div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <a class="thumbnail" href="#">
+                <a class="thumbnail" href="{{ path('mipa_img_show', { 'id': entity.id }) }}">
 
                 <img class="img-responsive" src="{{asset (('uploads/pics/'~entity.image) | imagine_filter('my_thumb')) }}"/></td>
                 </a>
