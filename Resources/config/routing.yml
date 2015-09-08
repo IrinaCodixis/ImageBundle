@@ -13,3 +13,7 @@ login_check:
     pattern:   /login_check
 logout:
     pattern:   /logout
+
+mipa_image_rest:
+    resource: "@MipaImageBundle/Resources/config/routing/rest.yml"
+    prefix:   /api
