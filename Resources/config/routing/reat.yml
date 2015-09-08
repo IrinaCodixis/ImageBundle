@@ -1,3 +1,0 @@
-images:
-    resource: Mipa\ImageBundle\Controller\CompaniesRestController
-    type:     rest
