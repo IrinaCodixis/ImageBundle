@@ -38,7 +38,7 @@ use Mipa\ImageBundle\Form\ImagesType;
 		
 		foreach ($images as $k => $image) {
             $image->setImage($imagine->getBrowserPath(
-                $image->getImage()->getSlug(),
+                $image->getImage(),
                 'my_thumb'
             ));
         }
