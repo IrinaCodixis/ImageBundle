@@ -34,7 +34,7 @@ use Mipa\ImageBundle\Form\ImagesType;
         $imagine = $this->get('liip_imagine.cache.manager');
         $em = $this->getDoctrine()->getManager();
         
-        $entity = $em->getRepository('MipaImageBundle:Images')->find($id);
+        $images = $em->getRepository('MipaImageBundle:Images')->findAll();
 		
 		foreach ($images as $k => $image) {
             $image->setImagePath($imagine->getBrowserPath(
