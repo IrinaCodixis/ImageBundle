@@ -37,7 +37,7 @@ use Mipa\ImageBundle\Form\ImagesType;
         $images = $em->getRepository('MipaImageBundle:Images')->findAll();
 		
 		foreach ($images as $k => $image) {
-            $image->setImagePath($imagine->getBrowserPath(
+            $image->setImage($imagine->getBrowserPath(
                 $image->getImage()->getSlug(),
                 'my_thumb'
             ));
