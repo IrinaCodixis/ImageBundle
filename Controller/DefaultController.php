@@ -4,7 +4,7 @@ namespace Mipa\ImageBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Core\SecurityContext;
-use Mipa\ImageBundle\Entity\User
+use Mipa\ImageBundle\Entity\User;
 
 class DefaultController extends Controller
 {
