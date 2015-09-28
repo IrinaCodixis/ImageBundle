@@ -47,14 +47,12 @@ class DefaultController extends Controller
 				$username = $login->getUsername();
 				$password = $login->getPassword();
 				$user = $repo->findOneBy(array('userName' => $username, '$password' => $password));
-				$error = $session->get(SecurityContext::AUTHENTICATION_ERROR);
-				$session->remove(SecurityContext::AUTHENTICATION_ERROR);
+				
 			}
         return $this->render('MipaImageBundle:Default:login.html.twig', array(
             // last username entered by the user
             'last_username' => $session->get(SecurityContext::LAST_USERNAME),
-            'error'         => $error,
-        ));
+			));
 		}
 	}
 	
